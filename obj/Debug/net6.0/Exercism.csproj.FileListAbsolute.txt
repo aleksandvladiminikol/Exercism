@@ -1,0 +1,15 @@
+C:\Users\aleksandr.nikolaev\Education\C#\Sandbox\Exercism\bin\Debug\net6.0\Exercism.exe
+C:\Users\aleksandr.nikolaev\Education\C#\Sandbox\Exercism\bin\Debug\net6.0\Exercism.deps.json
+C:\Users\aleksandr.nikolaev\Education\C#\Sandbox\Exercism\bin\Debug\net6.0\Exercism.runtimeconfig.json
+C:\Users\aleksandr.nikolaev\Education\C#\Sandbox\Exercism\bin\Debug\net6.0\Exercism.dll
+C:\Users\aleksandr.nikolaev\Education\C#\Sandbox\Exercism\bin\Debug\net6.0\ref\Exercism.dll
+C:\Users\aleksandr.nikolaev\Education\C#\Sandbox\Exercism\bin\Debug\net6.0\Exercism.pdb
+C:\Users\aleksandr.nikolaev\Education\C#\Sandbox\Exercism\obj\Debug\net6.0\Exercism.csproj.AssemblyReference.cache
+C:\Users\aleksandr.nikolaev\Education\C#\Sandbox\Exercism\obj\Debug\net6.0\Exercism.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aleksandr.nikolaev\Education\C#\Sandbox\Exercism\obj\Debug\net6.0\Exercism.AssemblyInfoInputs.cache
+C:\Users\aleksandr.nikolaev\Education\C#\Sandbox\Exercism\obj\Debug\net6.0\Exercism.AssemblyInfo.cs
+C:\Users\aleksandr.nikolaev\Education\C#\Sandbox\Exercism\obj\Debug\net6.0\Exercism.csproj.CoreCompileInputs.cache
+C:\Users\aleksandr.nikolaev\Education\C#\Sandbox\Exercism\obj\Debug\net6.0\Exercism.dll
+C:\Users\aleksandr.nikolaev\Education\C#\Sandbox\Exercism\obj\Debug\net6.0\ref\Exercism.dll
+C:\Users\aleksandr.nikolaev\Education\C#\Sandbox\Exercism\obj\Debug\net6.0\Exercism.pdb
+C:\Users\aleksandr.nikolaev\Education\C#\Sandbox\Exercism\obj\Debug\net6.0\Exercism.genruntimeconfig.cache
