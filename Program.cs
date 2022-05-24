@@ -4,11 +4,13 @@ class Programm
 {
     static void Main()
     {
-        var result = PythagoreanTriplet.TripletsWithSum(1000);
+        var matrix = new[,]
+       {{4, 5, 4}, {3, 5, 5}, {1, 5, 4}};
 
-        foreach (var triplet in result)
+        foreach (var row in SaddlePoints.Calculate(matrix))
         {
-            Console.WriteLine(triplet);
+            Console.WriteLine(row.ToString());
         }
+                
     }
 }
