@@ -43,7 +43,6 @@ public static class Dominoes
                 List<(int, int)> copy = copyList(dominoes);
                 copy.RemoveAt(copy.IndexOf(domino));
                 return Solve(copy, domino.Item1, domino.Item2);
-                break;
             }
             else
             {
