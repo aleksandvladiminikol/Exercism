@@ -1,0 +1,2 @@
+namespace Exercism;
+wa
