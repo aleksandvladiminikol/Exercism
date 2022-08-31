@@ -23,15 +23,13 @@ public static class RunLengthEncoding
             }
 
             if (prevSym == sym)
-            {
                 counter++;
-            }
+            
             else
             {
                 if (counter > 1)
-                {
                     result.Append(counter);
-                } 
+                 
                 result.Append(prevSym);
                 counter = 1;
                 prevSym = sym;
