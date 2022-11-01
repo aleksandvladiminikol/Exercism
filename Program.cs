@@ -1,11 +1,8 @@
-﻿using System.Runtime.CompilerServices;
-
 namespace Exercism;
 
-class Programm
+public static class Program
 {
-    static void Main()
+    public static void main()
     {
-        Console.WriteLine(Pangram.IsPangram("Gur dhvpx oebja sbk whzcf bire gur ynml qbt."));
     }
 }
