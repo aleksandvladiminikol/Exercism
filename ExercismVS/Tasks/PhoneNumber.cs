@@ -1,36 +1,37 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Text.RegularExpressions;
-namespace Exercism
+using System.Collections.Generic;
+
+public class PhoneNumber
 {
-    public static class PhoneNumber
+    private const string Format = "NXXNXXXXXX";
+    private const char NChar = 'N';
+    private const int MinN = 2;
+    
+    public static string Clean(string phoneNumber)
     {
-        public static (bool IsNewYork, bool IsFake, string LocalNumber) Analyze(string phoneNumber)
+        var processed = phoneNumber.Where(char.IsDigit).Select(char.GetNumericValue).ToList();
+
+        if (processed.Count > Format.Length + 1)
+            throw new ArgumentException();
+        
+        while (processed.Count > Format.Length)
         {
-            string[] parsed = parse(phoneNumber);
-            bool IsNewYork = (parsed[0] == "212");
-            bool IsFake = (parsed[1] == "555");
-            string LocalNumber = parsed[2];
-            return (IsNewYork, IsFake, LocalNumber);
+            if (processed[0] != 1)
+                throw new ArgumentException();
+            processed.RemoveAt(0);
         }
 
-        public static bool IsFake((bool IsNewYork, bool IsFake, string LocalNumber) phoneNumberInfo)
+        var checkingIndexes = 
+            from pair in Format.Select((c, i) => (c, i)) 
+            where pair.c == NChar 
+            select pair.i;
+        
+        if (checkingIndexes.Any(checkIndex => processed[checkIndex] < MinN) || processed.Count() < Format.Length)
         {
-            return phoneNumberInfo.IsFake;
+            throw new ArgumentException();
         }
+        return string.Concat(processed);
 
-        internal static IEnumerable<string> Parse(string v)
-        {
-            throw new NotImplementedException();
-        }
-
-        private static string[] parse(string phoneNumber)
-        {
-            string[] result = Regex.Split(phoneNumber, @"-");
-            return result;
-        }
     }
 }
