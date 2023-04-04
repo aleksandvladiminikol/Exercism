@@ -10,7 +10,4 @@
   <ItemGroup>
     <None Remove="Tasks\" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Tasks\" />
-  </ItemGroup>
 </Project>
