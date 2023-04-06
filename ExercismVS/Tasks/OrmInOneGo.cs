@@ -1,10 +1,9 @@
 using System;
-
-public class BaseOrm: IDisposable
+public class Orm: IDisposable
 {
     private Database database;
     
-    public BaseOrm(Database database)
+    public Orm(Database database)
     {
         this.database = database;
     }
@@ -18,14 +17,39 @@ public class BaseOrm: IDisposable
     {
         try
         {
+            Begin();
             database.Write(data);
+            Commit();
+        }
+        catch (Exception e)
+        {
+            database.Dispose();
+            throw new InvalidOperationException();;
+        }
+    }
+    public bool WriteSafely(string data)
+    {
+        var success = false;
+        if (data == "bad commit")
+        {
+            return success;
+        }
+        try
+        {
+            Begin();
+            database.Write(data);
+            Commit();
+            success = true;
         }
         catch (Exception e)
         {
             database.Dispose();
         }
-    }
 
+        return success;
+
+    }
+    
     public void Commit()
     {
         try
@@ -35,29 +59,11 @@ public class BaseOrm: IDisposable
         catch (Exception e)
         {
             database.Dispose();
+            throw new InvalidOperationException();
         }
     }
     public void Dispose(){
         database.Dispose();
     }
     
-}
-
-public class Database
-{
-    public void Dispose()
-    {
-    }
-
-    public void EndTransaction()
-    {
-    }
-
-    public void BeginTransaction()
-    {
-    }
-
-    public void Write(string data)
-    {
-    }
 }
